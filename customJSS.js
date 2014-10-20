@@ -3,7 +3,7 @@
 // @namespace  https://jss.
 // @version    0.1
 // @description  JSS customizations - 74bit MCP
-// @include      https://mcp.74bit.com/*
+// @include      https://jss.*
 // @copyright  2014, Owen Pragel
 // ==/UserScript==
 
