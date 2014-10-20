@@ -75,7 +75,7 @@ h4 {
   padding:15px 0 14px;
 }
 
-.dashboardSuggestion .metricSuggestion {
+span.dashboardSuggestion.metricSuggestion {
   display: none;
 } 
 
