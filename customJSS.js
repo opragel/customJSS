@@ -22,12 +22,13 @@
 // Shrink/expand settings categories
 
 var jssURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname // URL of your JSS (w/ trailing slash)
-var customFileDirectory='https://mcp.74bit.com/custom/' // URL of directory w/ custom files
+var customFileDirectory='http://owen-74bit.github.io/customJSS/custom/' // URL of directory w/ custom files
 var customLogoURL=customFileDirectory + 'osimp.png'
+var customCSSURL=customFileDirectory + 'customJSS.css'
 
 // Link to default JSS font (default Roboto)
 var font="<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>";
-var customCSS="<link href='" + customFileDirectory + "customJSS.css' rel='stylesheet' type='text/css'>";
+var customCSS="<link href='" + customCSSURL + "' rel='stylesheet' type='text/css'>";
 
 var createMenuItem = function( 	url, displayName ) {
     return '<li class=" "><a href="' + url + '">' + displayName + '</a></li>';
