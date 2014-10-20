@@ -272,7 +272,7 @@ th {
 #sidebar-nav .divider:last {
   display:none;
 }
-
+c
 .expandButton {
   display: none;
   position: fixed;
@@ -283,7 +283,7 @@ th {
 #topExpandButton {
   top: 0;
   padding: 9px 4px 100% 2px;
-  z-index: 3;
+  z-index: 2;
 }
 
 #bottomExpandButton {
