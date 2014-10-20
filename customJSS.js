@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name       Owen's JSS Customizations - JSS
+// @name       Owen's JSS Customizations - Generic
 // @namespace  https://jss.
 // @version    0.1
-// @description  JSS customizations - 74bit MCP
+// @description  JSS customizations - Generic
 // @include      https://jss.*
 // @copyright  2014, Owen Pragel
 // ==/UserScript==
