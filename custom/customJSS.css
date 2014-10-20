@@ -272,18 +272,18 @@ th {
 #sidebar-nav .divider:last {
   display:none;
 }
-c
+
 .expandButton {
   display: none;
   position: fixed;
   left: 0;
   background-color: rgb(17, 58, 110);
+  z-index: 2;
 }
 
 #topExpandButton {
   top: 0;
   padding: 9px 4px 100% 2px;
-  z-index: 2;
 }
 
 #bottomExpandButton {
