@@ -11,6 +11,11 @@
 // Last tested with JSS version 9.6
 // Disclaimer: Script is presented as-is, use at your own risk.
 
+var jssURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
+var customFileDirectory='https://owen-74bit.github.io/customJSS/custom/';
+var customLogoURL=customFileDirectory + 'osimp.png';
+var customCSSURL=customFileDirectory + 'customJSS.css';
+
 //// Changes
 // Numerous restylings
 // Sidebar modifications
@@ -20,11 +25,6 @@
 // Saved searches & group links go to search page, edit button added
 // Policies have shortcut link to logs
 // Shrink/expand settings categories
-
-var jssURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
-var customFileDirectory='https://owen-74bit.github.io/customJSS/custom/';
-var customLogoURL=customFileDirectory + 'osimp.png';
-var customCSSURL=customFileDirectory + 'customJSS.css';
 
 // Link to default JSS font (default Roboto)
 var font="<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>";
