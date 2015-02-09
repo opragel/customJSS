@@ -44,7 +44,7 @@ $('head').append(font + customCSS);
 $('#settings').attr('class','');
 
 // Change header/logo style
-$('#logo-dash .hidemobile').attr("src", customLogoURL);
+$('#logo-dash .hidemobile').attr('src', customLogoURL);
 
 // - Login changes
 var ologo="<img src='" + customLogoURL + "' id='simplogo' alt='JAMF JSS'>";
@@ -54,18 +54,22 @@ if ($('#login-panel').length) {
 }
 
 else {    
-    var scriptURL = createMenuItem( "scripts.html", "Scripts" );
-    var packagesURL = createMenuItem( "packages.html", "Packages" );
-    var extensionsURL = createMenuItem( "computerExtensionAttributes.html", "Extension Attributes" );
-    var settingsURL = createMenuItemID( "settings.html", "Settings", "settingsconsole");
-    var advCompSearchURL = createMenuItemID( "advancedComputerSearches.html?id=-1&o=c", "Advanced Search", "advancedSearch");
-    var policiesURL = createMenuItemID( "policies.html", "Policies", "policies");
-    var printersURL = createMenuItem( "printers.html", "Printers");
-    var accountsURL = createMenuItem( "accounts.html", "JSS Accounts");
-    var computersURL = createMenuItem( "computers.html", "Computers");
-    var mobileURL = createMenuItem( "mobileDevices.html", "Mobile Devices");
+    var scriptURL = createMenuItem( 'scripts.html', 'Scripts' );
+    var packagesURL = createMenuItem( 'packages.html', 'Packages' );
+    var extensionsURL = createMenuItem( 'computerExtensionAttributes.html', 'Extension Attributes' );
+    var extensionsMobileURL = createMenuItem('mobileDeviceExtensionAttributes.html', 'Extension Attributes');
+    var settingsURL = createMenuItemID( 'settings.html', 'Settings', 'settingsconsole');
+    var advCompSearchURL = createMenuItemID( 'advancedComputerSearches.html?id=-1&o=c', 'Advanced Search', 'advancedSearch');
+    var advMobileSearchURL = createMenuItemID( 'advancedMobileDeviceSearches.html?id=-1&o=c', 'Advanced Search', 'advancedSearch');
+    var advUserSearchURL = createMenuItemID('advancedUserSearches.html?id=-1&o=c', 'Advanced Search', 'advancedSearch');
+    var policiesURL = createMenuItemID( 'policies.html', 'Computer Policies', 'policies');
+    var printersURL = createMenuItem( 'printers.html', 'Printers');
+    var accountsURL = createMenuItem( 'accounts.html', 'JSS Accounts');
+    var computersURL = createMenuItem( 'computers.html', 'Computers');
+    var mobileURL = createMenuItem( 'mobileDevices.html', 'Mobile Devices');
+    var JSSusersURL = createMenuItem('accounts.html', 'JSS Users & Groups');
     var divider = "<li class='divider'></li>";
-      
+    
     // Sidebar
     $('#sidebar-nav,#logo-dash').addClass('sidebar-whole');//Groups sidebar elements 
     // Adds buttons for expanding sidebar
@@ -79,10 +83,10 @@ else {
     // - Setting Pages
     if ( $( "li:contains('JSS Information')").length ) {
         // Adds links to sidebar
-        $("#sidebar-nav").prepend(computersURL,mobileURL,divider);
-        $('#sidebar-nav').append(accountsURL,divider,extensionsURL,packagesURL,printersURL,policiesURL,scriptURL,divider,settingsURL);
+        $('#sidebar-nav').prepend(computersURL,mobileURL,divider);
+        $('#sidebar-nav').append(accountsURL,divider,policiesURL,extensionsURL,packagesURL,printersURL,scriptURL,divider,settingsURL);
         // Makes settings sections expandable & adds a little arrow
-        $(".settings-row h5").append("<img src='" + jssURL + "images/navigation/down-arrow.png' width='9px' height='8px' alt='Expand'>");
+        $(".settings-row h5').append('<img src='" + jssURL + "images/navigation/down-arrow.png' width='9px' height='8px' alt='Expand'>");
         $(function(){
             $('.settings-row').click(function(){
                 $(this).find('ul').toggle();
@@ -98,18 +102,18 @@ else {
     else if ( $( 'li:contains("Managed Preferences")').length ) {
         // Adds links to the sidebar
         $('#sidebar-nav li:contains("Search Inventory")').after(advCompSearchURL);
-        $('#sidebar-nav').append(extensionsURL,packagesURL,printersURL,scriptURL,divider,settingsURL);
+        $('#sidebar-nav').append(extensionsURL,packagesURL,printersURL,scriptURL);
         
         // Dividers to hide
-        $('li:contains("Enrollment Invitations")').next('.divider').remove();
+        //$('li:contains("Enrollment Invitations")').next('.divider').remove();
         
         // Policies style changes
         if( $( 'h2:contains("Policies")').length ) {
-            $('.policiesTable.dataTable thead tr').append("<th class='header' style='width: 15px;'></th>");
+            $('.policiesTable.dataTable thead tr').append("<th class='header' style='width: 15px;'>Logs</th>");
             $('.policiesTable.dataTable tbody tr:not(".group")').each(function() {
                 var computerLink = $(this).find('td a').attr('href');
                 computerLink = computerLink.replace(/o=r/, 'o=l');
-                $(this).append("<td style='width:15px;'><a class='cancelButton' href='" + computerLink + "'>Logs</a>");
+                $(this).append("<td printf><a class='cancelButton' href='" + computerLink + "'>Logs</a>");
             });
         }
         
@@ -118,59 +122,55 @@ else {
             $(".search-wrapper").append("<a id='advSearch' href='advancedComputerSearches.html?id=-1&amp;o=c'>Advanced Search</a>");
             $("h2").insertBefore("#content-inside form");
             $("#table-top").hide();
-            $("#DataTables_Table_0 thead tr").append("<th class='header' style='width: 15px; border-left: 0;'></th>");
+            $("#DataTables_Table_0 thead tr").append("<th class='header'>Details</th><th class='header'>Edit</th>");
             $('#DataTables_Table_0 tbody tr').each(function() {
                 var editLink = $(this).find(".view").attr("href");
                 var viewLink = editLink.replace(/o=r/, "o=v");
                 $(this).find(".view").attr("href",viewLink);
-                $(this).append("<td style='width:15px;'><a href='" + editLink.replace(/o=r/, "o=u") + "'>Edit</a>");
+                $(this).append("<td><a href='" + editLink + "'>View</a>");
+                $(this).append("<td><a href='" + editLink.replace(/o=r/, 'o=u') + "'>Edit</a>");
             });
             
         }
         
         // Computer Groups changes
         if( $( "h2:contains('Computer Groups')").length ) {
-            $(".standardDataTable thead tr").append("<th class='header'></th>");
+            $('.standardDataTable thead tr').append("<th class='header'>Details</th><th class='header'>Edit</th>");
             $('.standardDataTable tbody tr').each(function() {
-                var editLink = $(this).find(".view").attr("href");
-                var viewLink = editLink.replace(/o=r/, "o=v");
-                $(this).find(".view").attr("href",viewLink);
-                $(this).append("<td style='width:15px;'><a class='cancelButton' href='" + editLink + "'>Edit</a>");
+                var editLink = $(this).find('.view').attr('href');
+                var viewLink = editLink.replace(/o=r/, 'o=v');
+                $(this).find('.view').attr('href',viewLink);
+                $(this).append("<td><a href='" + editLink + "'>View</a>");
+                $(this).append("<td printf><a href='" + editLink.replace(/o=r/, 'o=u') + "'>Edit</a>");
             });
         }
         
     } //Ends Computer pages else
-        
-        // - Mobile Pages
-        else {
-            $( "#sidebar-nav").append(settingsURL);
+        else if ( $( 'li:contains("Smart Mobile Device Groups")').length ) {
             if( $( "h2:contains('Advanced Mobile Device Searches')").length ) {
+                
                 //Experimental 'new' button replacement on advanced search
-                $(".search-wrapper").append("<a id='advSearch' href='advancedMobileDeviceSearches.html?id=-1&o=c'>Advanced Search</a>");
-                $("h2").insertBefore("#content-inside form");
-                $("#table-top").hide();
-                $(".standardDataTable thead tr").append("<th class='header'></th>");
+                $(".standardDataTable thead tr").append("<th class='header'>Details</th><th class='header'>Edit</th>");
+                $('h2').insertBefore("#content-inside form");
+                $('#table-top').hide();
                 $('.standardDataTable tbody tr').each(function() {
-                    var editLink = $(this).find(".view").attr("href");
-                    var viewLink = editLink.replace(/o=r/, "o=v");
-                    $(this).find(".view").attr("href",viewLink);
-                    $(this).append("<td style='width:15px;'><a class='cancelButton' href='" + editLink + "'>Edit</a>");
+                    var editLink = $(this).find('.view').attr('href');
+                    var viewLink = editLink.replace(/o=r/, 'o=v');
+                    $(this).find('.view').attr('href',viewLink);
+                    $(this).append("<td printf><a href='" + editLink + "'>View</a>");
+                    $(this).append("<td printf><a class='cancelButton' href='" + editLink + "'>Edit</a>");
                 });
                 
             }
-            
-            if( $('h2:contains("Device Groups")').length) {
-                $('.standardDataTable thead tr').append("<th class='header'></th>");
-                $('.standardDataTable tbody tr').each(function() {
-                    var editLink = $(this).find(".view").attr("href");
-                    var viewLink = editLink.replace(/o=r/, "o=v");
-                    $(this).find(".view").attr("href",viewLink);
-                    $(this).append("<td style='width:15px;'><a class='cancelButton' href='" + editLink + "'>Edit</a>");
-                });
+            $('#sidebar-nav li:contains("Search Inventory")').after(advMobileSearchURL);
+            $('#sidebar-nav').append(extensionsMobileURL);
         }
-    
+         
+        if ( $( 'li:contains("Smart User Groups")').length ) {
+            $('#sidebar-nav li:contains("Search Users")').after(advUserSearchURL);
+            $('#sidebar-nav').append(JSSusersURL);
         }
-    
+        
     // Corrects dashboard page style
     if ( $("#dashboard-header").length ) {
 
@@ -178,6 +178,7 @@ else {
     
     //Everywhere else
     else {
+        $('#sidebar-nav').append(divider,settingsURL);
         // Makes sidebar navigation & logo fixed position
         $('#sidebar-nav, #logo-dash').addClass( "sidebar-whole" );
         
@@ -185,24 +186,24 @@ else {
         $(function(){     
             $('.sidebar-whole').click(function(){         
                 $('.sidebar-whole').toggle();
-                $('#navigation').css( "left","28px" );
-                $('#content-inside').css("margin-left","15px");
-                $('#sites-link').css("margin-left", "15px");
-                $('.expandButton').css("display","inline");
-                $('#footer').css("display","none");
+                $('#navigation').css( 'left','28px' );
+                $('#content-inside').css('margin-left','15px');
+                $('#sites-link').css('margin-left', '15px');
+                $('.expandButton').css('display','inline');
+                $('#footer').css('display','none');
             });
             $('.sidebar-whole a').click(function(e){
-                e.stopPropagation(); 
+               e.stopPropagation(); 
             });
             $('.expandButton').click(function(){
                 $('.sidebar-whole').toggle();
-                $('#navigation').css( "left","236px");
-                $('#content-inside').css("margin-left","236px");
-                $('#site-links').css("margin-top","15px");
-                $('#sites-link').css("margin-left", "auto");
-                $('.expandButton').css("display","none");
+                $('#navigation').css( 'left','236px');
+                $('#content-inside').css('margin-left','236px');
+                $('#site-links').css('margin-top','15px');
+                $('#sites-link').css('margin-left', 'auto');
+                $('.expandButton').css('display','none');
                 if($(window).height() > 400) {
-                    $('#footer').css("display","block");
+                    $('#footer').css('display','block');
                 }
             });
         }); 
@@ -210,10 +211,10 @@ else {
         $(window).on('resize', function(){
             var win = $(this); //this = window
             if (win.height() >= 400) {
-                $('#footer').css("display","block");
+                $('#footer').css('display','block');
             }
             else {
-                $('#footer').css("display","none");
+                $('#footer').css('display',"none");
             }
         });
         
