@@ -12,7 +12,7 @@
 // Disclaimer: Script is presented as-is, use at your own risk.
 
 var jssURL = window.location.protocol + "//" + window.location.host + "/";
-var customFileDirectory='https://owen-74bit.github.io/customJSS/custom/';
+var customFileDirectory='https://opragel.github.io/customJSS/custom/';
 var customLogoURL=customFileDirectory + 'osimp.png';
 var customCSSURL=customFileDirectory + 'customJSS.css';
 
