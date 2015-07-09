@@ -277,7 +277,8 @@ th {
   position: fixed;
   left: 0;
   background-color: rgb(17, 58, 110);
-  z-index: 99;
+  z-index: 2;
+  width: 20px;
 }
 
 #topExpandButton {
