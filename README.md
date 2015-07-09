@@ -11,9 +11,13 @@ Last tested with Chrome 43.0.2357.132 and JSS 9.72.
 
 ## Installation
 
-To use, install Tampermonkey and paste the JS file in as a script. There's a better way to do it, haven't checked that out yet. Sorry
+To use, install Tampermonkey and paste the JS file in as a script. There's a better way to do it, haven't checked that out yet. Sorry.
 
-https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en
+If it doesn't work, check to make sure your URL is including in the namespace! By default it applies the changes to *://jss.
+
+Line 3 of the JS: // @namespace  https://jss.
+
+Tamppermonkey: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en
 
 Known bugs:
 
