@@ -3,28 +3,17 @@
 // @namespace  https://jss.
 // @version    0.1
 // @description  JSS customizations - Generic
-// @include      https://jss.*
-// @copyright  2014, Owen Pragel
+// @include      *://jss.*
 // ==/UserScript==
 
 // - Intro/Disclaimer
-// Last tested with JSS version 9.6
+// Last tested with JSS version 9.72
 // Disclaimer: Script is presented as-is, use at your own risk.
 
-var jssURL = window.location.protocol + "//" + window.location.host + "/";
+var jssURL = window.location.protocol + "//" + window.location.host + "";
 var customFileDirectory='https://opragel.github.io/customJSS/custom/';
 var customLogoURL=customFileDirectory + 'osimp.png';
 var customCSSURL=customFileDirectory + 'customJSS.css';
-
-//// Changes
-// Numerous restylings
-// Sidebar modifications
-//  - Additions
-//  - removals/reordering
-//  - Settings goes to all settings page
-// Saved searches & group links go to search page, edit button added
-// Policies have shortcut link to logs
-// Shrink/expand settings categories
 
 // Link to default JSS font (default Roboto)
 var font="<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>";
@@ -33,7 +22,7 @@ var customCSS="<link href='" + customCSSURL + "' rel='stylesheet' type='text/css
 var createMenuItem = function(  url, displayName ) {
     return '<li class=" "><a href="' + url + '">' + displayName + '</a></li>';
 };
- 
+
 var createMenuItemID = function( url, displayName, id ) {
     return '<li class=" " id="' + id + '"><a href="' + url + '">' + displayName + '</a></li>';
 };
@@ -76,7 +65,7 @@ else {
     $('#site-links').prepend("<img class='expandButton' id='bottomExpandButton' src='" + jssURL + "images/navigation/arrow-active.png'><img class='expandButton' id='topExpandButton' src='" + jssURL + "images/navigation/arrow-active.png'>");
     
     $('#settings').attr('href', 'settings.html');
-
+    
     // Modifies spacing on form wrappers, h2s
     $( 'li:contains("Management Settings")').remove();
     $( '.searchLabel').remove();   
@@ -165,15 +154,15 @@ else {
             $('#sidebar-nav li:contains("Search Inventory")').after(advMobileSearchURL);
             $('#sidebar-nav').append(extensionsMobileURL);
         }
-         
+        
         if ( $( 'li:contains("Smart User Groups")').length ) {
             $('#sidebar-nav li:contains("Search Users")').after(advUserSearchURL);
             $('#sidebar-nav').append(JSSusersURL);
         }
-        
+    
     // Corrects dashboard page style
     if ( $("#dashboard-header").length ) {
-
+        
     }
     
     //Everywhere else
@@ -193,7 +182,7 @@ else {
                 $('#footer').css('display','none');
             });
             $('.sidebar-whole a').click(function(e){
-               e.stopPropagation(); 
+                e.stopPropagation(); 
             });
             $('.expandButton').click(function(){
                 $('.sidebar-whole').toggle();
