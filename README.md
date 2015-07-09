@@ -1,6 +1,7 @@
 customJSS
 =========
 
-DISCLAIMER: This script is provided as-is and we are not responsible for any issues that may occur while using the 
+DISCLAIMER: This script is provided as-is... enjoy. As you might be able to tell by the code I am not a JS pro in any sense.
 
 Customizes the JAMF JSS web front-end with goal of improving interface appearance and usability.
+
