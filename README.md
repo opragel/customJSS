@@ -7,6 +7,10 @@ Customizes the JAMF JSS web front-end with goal of improving interface appearanc
 
 Meant for use with Tampermonkey and Chrome. 
 
+Last tested with Chrome 43.0.2357.132 and JSS 9.72.
+
+## Installation
+
 To use, install Tampermonkey and paste the JS file in as a script. There's a better way to do it, haven't checked that out yet. Sorry
 
 https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en
