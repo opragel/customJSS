@@ -194,6 +194,7 @@ header {
 .header {
   width: 15px;
 }
+
 #mobile-link a,#mobile-link a:hover {
   background:url(../../images/navigation/mobile-icon.png) no-repeat 50%;
   background-size:contain;
@@ -320,4 +321,9 @@ input.cancelButton {
 
 .tile-series-widget {
   margin: 70px 0 30px;
+}
+
+#wrapper table th  {
+	background: #f5f5f5 !important;
+	border-bottom: 1px solid #d5d5d5;
 }
