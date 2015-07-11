@@ -326,3 +326,12 @@ input.cancelButton {
 	background: #f5f5f5 !important;
 	border-bottom: 1px solid #d5d5d5;
 }
+
+
+/* Styles (flattens) 'show all' and 'hide all' buttons */
+#form-wrapper input.insideTableButton, #form-wrapper input.insideCancelButton, #form-wrapper input.insideActionButton, input.insideActionButton {
+	box-shadow: 0;
+	background: #f5f5f5 !important;
+	background-color: #f5f5f5 !important;
+	border-radius: 0;
+}
