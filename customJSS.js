@@ -62,7 +62,7 @@ else {
     // Sidebar
     $('#sidebar-nav,#logo-dash').addClass('sidebar-whole');//Groups sidebar elements 
     // Adds buttons for expanding sidebar
-    $('#site-links').prepend("<img class='expandButton' id='bottomExpandButton' src='" + jssURL + "images/navigation/arrow-active.png'><img class='expandButton' id='topExpandButton' src='" + jssURL + "images/navigation/arrow-active.png'>");
+    $('#sidebar').prepend("<img class='expandButton' id='bottomExpandButton' src='" + jssURL + "/images/navigation/arrow-active.png'><img class='expandButton' id='topExpandButton' src='" + jssURL + "/images/navigation/arrow-active.png'>");
     
     $('#settings').attr('href', 'settings.html');
     
