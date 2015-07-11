@@ -23,7 +23,6 @@ Last tested with Chrome 43.0.2357.132 and JSS 9.72.
 #### Planned
 - Ability to create scripts, computer/mobile smart/static groups, upload packages, network segment, and more directly from policy creation screen.
 - Completely redone navigation bar
-- 
 
 ## Requirements
 
