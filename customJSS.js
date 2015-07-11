@@ -13,7 +13,7 @@
 var jssURL = window.location.protocol + "//" + window.location.host + "";
 var customFileDirectory='https://opragel.github.io/customJSS/custom/';
 var customLogoURL=customFileDirectory + 'osimp.png';
-var customCSSURL=customFileDirectory + 'customJSS.css';
+var customCSSURL=customFileDirectory + 'customJSS.min.css';
 
 // Link to default JSS font (default Roboto)
 var font="<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>";
