@@ -315,7 +315,6 @@ input.cancelButton {
 }
 
 #dashboard-page #navigation {
-  position: fixed;
   background-color: #f5f5f5;
 }
 
