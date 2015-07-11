@@ -28,7 +28,7 @@ Last tested with Chrome 43.0.2357.132 and JSS 9.72.
 
 - JAMF Software Server 9.x (Last tested on 9.72)
 - Tampermonkey extension & Google Chrome
--- Greasemonkey and Firefox work, but I've seen additional bugs. Have not examined closely this far.
+  - Greasemonkey and Firefox work, but I've seen additional bugs. Have not examined closely this far.
 
 ## Installation
 
