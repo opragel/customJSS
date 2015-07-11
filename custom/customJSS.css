@@ -163,7 +163,9 @@ select,.search-wrapper input {
 
 
 #dashboard-header {
-  background:#113a6e;
+  background: #113a6e;
+  posistion: relative;
+  z-index: -1;
 }
 
 #dashboard-header h2 {
