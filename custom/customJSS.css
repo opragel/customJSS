@@ -335,10 +335,15 @@ input.cancelButton {
 }
 
 
-/* Styles (flattens) 'show all' and 'hide all' buttons, as well as 'filter policies' fields */
-#form-wrapper input.insideTableButton, #form-wrapper input.insideCancelButton, #form-wrapper input.insideActionButton, input.insideActionButton, .dataTables_filter input, input.dataTables_filter {
+/* Styles (flattens) 'show all' and 'hide all' buttons, filter policies field, various buttons  */
+#form-wrapper input.insideTableButton, #form-wrapper input.insideCancelButton, #form-wrapper input.insideActionButton, input.insideActionButton, .dataTables_filter input, input.dataTables_filter, .dataTables_paginate, #form-wrapper ul.tabs li.active {
 	box-shadow: 0;
 	background: #f5f5f5 !important;
 	background-color: #f5f5f5 !important;
+	border-radius: 0;
+}
+
+#form-wrapper input.submitButton, input.searchResultsActionButton {
+	background: #4C6DA5;
 	border-radius: 0;
 }
