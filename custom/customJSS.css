@@ -115,11 +115,10 @@ span.dashboardSuggestion.metricSuggestion {
 #advSearch {
   border: none;
   background-color: rgb(248, 248, 255);
-  padding: 0.5em;
+  padding: 6px;
   border-radius: 3px;
   text-decoration: none;
   float: right;
-  margin: 1px;
   color: #000000;
 }
 
@@ -164,7 +163,9 @@ select,.search-wrapper input {
 
 
 #dashboard-header {
-  background:#113a6e;
+  background: #113a6e;
+  position: relative;
+  z-index: -1;
 }
 
 #dashboard-header h2 {
@@ -216,7 +217,7 @@ header {
 }
 
 #footer {
-  z-index:6;
+  z-index:;
   display:none;
 }
 
@@ -279,6 +280,7 @@ th {
   left: 0;
   background-color: rgb(17, 58, 110);
   z-index: 2;
+  width: 20px;
 }
 
 #topExpandButton {
@@ -289,7 +291,6 @@ th {
 #bottomExpandButton {
   bottom: 9px;
   padding-left: 2px;
-  z-index: 3;
 }
 
 #notifications,#right-links,#site-links,#site-links {
@@ -314,14 +315,9 @@ input.cancelButton {
 }
 
 #dashboard-page #navigation {
-  position: fixed;
   background-color: #f5f5f5;
 }
 
 .tile-series-widget {
   margin: 70px 0 30px;
-}
-
-#dashboard-header {
-  position: fixed;
 }
