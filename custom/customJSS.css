@@ -98,6 +98,10 @@ span.dashboardSuggestion.metricSuggestion {
   background-size:11px 15px;
 }
 
+#sidebar-nav a:hover {
+    color: #c5c5c5;
+}
+
 .sidebar-whole {
   background-color:#113A6E;
   z-index:2;
