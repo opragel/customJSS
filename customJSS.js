@@ -12,8 +12,8 @@
 
 var jssURL = window.location.protocol + "//" + window.location.host + "";
 var customFileDirectory='https://opragel.github.io/customJSS/custom/';
-var customLogoURL=customFileDirectory + 'osimp.png';
-var customCSSURL=customFileDirectory + 'customJSS.min.css';
+var customLogoURL = 'https://jss.volusion.com:8443/images/login/osx-jss-login.png';
+var customCSSURL=customFileDirectory + 'customJSS.css';
 
 // Link to default JSS font (default Roboto)
 var font="<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>";
@@ -31,6 +31,9 @@ var createMenuItemID = function( url, displayName, id ) {
 $('head').append(font + customCSS);
 
 $('#settings').attr('class','');
+
+// Changes font on policy and computer pages
+$('#form-wrapper').css('font', '13px/1.3 Roboto');
 
 // Change header/logo style
 $('#logo-dash .hidemobile').attr('src', customLogoURL);
@@ -62,7 +65,7 @@ else {
     // Sidebar
     $('#sidebar-nav,#logo-dash').addClass('sidebar-whole');//Groups sidebar elements 
     // Adds buttons for expanding sidebar
-    $('#sidebar').prepend("<img class='expandButton' id='bottomExpandButton' src='" + jssURL + "/images/navigation/arrow-active.png'><img class='expandButton' id='topExpandButton' src='" + jssURL + "/images/navigation/arrow-active.png'>");
+    $('#site-links').prepend("<img class='expandButton' id='bottomExpandButton' src='" + jssURL + "images/navigation/arrow-active.png'><img class='expandButton' id='topExpandButton' src='" + jssURL + "images/navigation/arrow-active.png'>");
     
     $('#settings').attr('href', 'settings.html');
     
