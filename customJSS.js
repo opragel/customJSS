@@ -12,7 +12,7 @@
 
 var jssURL = window.location.protocol + "//" + window.location.host + "";
 var customFileDirectory='https://opragel.github.io/customJSS/custom/';
-var customLogoURL = 'https://jss.volusion.com:8443/images/login/osx-jss-login.png';
+var customLogoURL=customFileDirectory + 'osimp.png';
 var customCSSURL=customFileDirectory + 'customJSS.css';
 
 // Link to default JSS font (default Roboto)
@@ -31,9 +31,6 @@ var createMenuItemID = function( url, displayName, id ) {
 $('head').append(font + customCSS);
 
 $('#settings').attr('class','');
-
-// Changes font on policy and computer pages
-$('#form-wrapper').css('font', '13px/1.3 Roboto');
 
 // Change header/logo style
 $('#logo-dash .hidemobile').attr('src', customLogoURL);
@@ -60,12 +57,14 @@ else {
     var computersURL = createMenuItem( 'computers.html', 'Computers');
     var mobileURL = createMenuItem( 'mobileDevices.html', 'Mobile Devices');
     var JSSusersURL = createMenuItem('accounts.html', 'JSS Users & Groups');
+    var JSSlogsURL = createMenuItem('logging.html', 'JSS System Logs');
+    var JSSsummaryURL = createMenuItem('summary.html', 'JSS Summary');
     var divider = "<li class='divider'></li>";
     
     // Sidebar
     $('#sidebar-nav,#logo-dash').addClass('sidebar-whole');//Groups sidebar elements 
     // Adds buttons for expanding sidebar
-    $('#site-links').prepend("<img class='expandButton' id='bottomExpandButton' src='" + jssURL + "images/navigation/arrow-active.png'><img class='expandButton' id='topExpandButton' src='" + jssURL + "images/navigation/arrow-active.png'>");
+    $('#sidebar').prepend("<img class='expandButton' id='bottomExpandButton' src='" + jssURL + "/images/navigation/arrow-active.png'><img class='expandButton' id='topExpandButton' src='" + jssURL + "/images/navigation/arrow-active.png'>");
     
     $('#settings').attr('href', 'settings.html');
     
@@ -76,12 +75,12 @@ else {
     if ( $( "li:contains('JSS Information')").length ) {
         // Adds links to sidebar
         $('#sidebar-nav').prepend(computersURL,mobileURL,divider);
-        $('#sidebar-nav').append(accountsURL,divider,policiesURL,extensionsURL,packagesURL,printersURL,scriptURL,divider,settingsURL);
+        $('#sidebar-nav').append(accountsURL,JSSlogsURL,JSSsummaryURL,divider,policiesURL,extensionsURL,packagesURL,printersURL,scriptURL);
         // Makes settings sections expandable & adds a little arrow
-        $(".settings-row h5').append('<img src='" + jssURL + "images/navigation/down-arrow.png' width='9px' height='8px' alt='Expand'>");
+        $('.settings-row h5').append("<img src='" + jssURL + "/images/navigation/down-arrow.png' width='9px' height='8px' alt='Expand'>");
         $(function(){
             $('.settings-row').click(function(){
-                $(this).find('ul').toggle();
+                $(this).find('li').toggle();
             });
             $('.settings-row .settings-item, .settings-row .summary-item input, .settings-row .check').click(function(e){
                 e.stopPropagation();
