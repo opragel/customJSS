@@ -59,6 +59,8 @@ else {
     var JSSusersURL = createMenuItem('accounts.html', 'JSS Users & Groups');
     var JSSlogsURL = createMenuItem('logging.html', 'JSS System Logs');
     var JSSsummaryURL = createMenuItem('summary.html', 'JSS Summary');
+    var allComputersURL = createMenuItem('computers.html?queryType=Computers&query=*', 'All Computers');
+    var allUsersURL = createMenuItem('users.html?query=*', 'All Users');
     var divider = "<li class='divider'></li>";
     
     // Sidebar
@@ -75,7 +77,7 @@ else {
     if ( $( "li:contains('JSS Information')").length ) {
         // Adds links to sidebar
         $('#sidebar-nav').prepend(computersURL,mobileURL,divider);
-        $('#sidebar-nav').append(accountsURL,JSSlogsURL,JSSsummaryURL,divider,policiesURL,extensionsURL,packagesURL,printersURL,scriptURL);
+        $('#sidebar-nav').append(accountsURL,JSSlogsURL,JSSsummaryURL,divider,allComputersURL,allUsersURL,policiesURL,extensionsURL,packagesURL,printersURL,scriptURL);
         // Makes settings sections expandable & adds a little arrow
         $('.settings-row h5').append("<img src='" + jssURL + "/images/navigation/down-arrow.png' width='9px' height='8px' alt='Expand'>");
         $(function(){
@@ -92,7 +94,7 @@ else {
     // - Computer Pages
     else if ( $( 'li:contains("Managed Preferences")').length ) {
         // Adds links to the sidebar
-        $('#sidebar-nav li:contains("Search Inventory")').after(advCompSearchURL);
+        $('#sidebar-nav li:contains("Search Inventory")').after(allComputersURL,advCompSearchURL);
         $('#sidebar-nav').append(extensionsURL,packagesURL,printersURL,scriptURL);
         
         // Dividers to hide
