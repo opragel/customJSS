@@ -160,9 +160,10 @@ else {
         }
         
         if ( $( 'li:contains("Smart User Groups")').length ) {
-            $('#sidebar-nav li:contains("Search Users")').after(advUserSearchURL);
+            $('#sidebar-nav li:contains("Search Users")').after(allUsersURL,advUserSearchURL);
             $('#sidebar-nav').append(JSSusersURL);
         }
+        
     
     // Corrects dashboard page style
     if ( $("#dashboard-header").length ) {
