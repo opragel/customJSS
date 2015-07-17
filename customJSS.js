@@ -4,6 +4,7 @@
 // @version    0.1
 // @description  JSS customizations - Generic
 // @include      *://jss.*
+// @include      https://*.jamfcloud.com*
 // ==/UserScript==
 
 // - Intro/Disclaimer
