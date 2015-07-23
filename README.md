@@ -13,10 +13,13 @@ Last tested with Chrome 43.0.2357.132 and JSS 9.72.
 
 - Requires NO direct modifications to your JSS instance
 - Tweaked aesthetics for a more modern, flat design.
+![Login page](https://raw.githubusercontent.com/opragel/customJSS/master/readme_images/jss-login.png)
 - Streamlined navigation and workflow
   - Reconfigured navigation bar
   - Expandable/shrinkable sidebar
+![Expandable / shrinkable sidebar](https://raw.githubusercontent.com/opragel/customJSS/master/readme_images/jss-sidebar-minimized.png)
   - All settings page option (not split up into system, global, computer, etc)
+![All settings page](https://raw.githubusercontent.com/opragel/customJSS/master/readme_images/jss-settings.png)
 - Fairly easy to reconfigure code & styling to your CSS
 
 
