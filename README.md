@@ -20,11 +20,11 @@ Last tested with Chrome 43.0.2357.132 and JSS 9.72.
 ![Expandable / shrinkable sidebar](https://raw.githubusercontent.com/opragel/customJSS/master/readme_images/jss-sidebar-minimized.png)
   - All settings page option (not split up into system, global, computer, etc)
 ![All settings page](https://raw.githubusercontent.com/opragel/customJSS/master/readme_images/jss-settings.png)
-- Fairly easy to reconfigure code & styling to your CSS
+- Fairly easy to reconfigure code & styling
 
 
 #### Planned
-- Ability to create scripts, computer/mobile smart/static groups, upload packages, network segment, and more directly from policy creation screen.
+- Ability to create scripts, computer/mobile smart/static groups, upload packages, network segment, and more directly from policy creation screen
 - Completely redone navigation bar
 
 ## Requirements
@@ -39,7 +39,7 @@ To use the script, install the Tampermonkey extension for Google Chrome and past
 
 If it doesn't work, check to make sure your JSS URL is in scope! By default it applies the changes to *://jss.
 
-Check line 6 the JS: // @include      *://jss.*
+Check line 6 of the JS: // @include      *://jss.*
 
 Tampermonkey: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en
 
