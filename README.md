@@ -7,7 +7,7 @@ Customizes the JAMF JSS web front-end with goal of improving interface appearanc
 
 Meant for use with Tampermonkey and Chrome. 
 
-Last tested with Chrome 43.0.2357.132 and JSS 9.72.
+Last tested with Chrome 44.0.2403.89 and JSS 9.73
 
 ## Features
 
@@ -29,7 +29,7 @@ Last tested with Chrome 43.0.2357.132 and JSS 9.72.
 
 ## Requirements
 
-- JAMF Software Server 9.x (Last tested on 9.72)
+- JAMF Software Server 9.x (Last tested on 9.73)
 - Tampermonkey extension & Google Chrome
   - Greasemonkey and Firefox work, but I've seen additional bugs. Have not examined closely this far.
 
@@ -45,5 +45,5 @@ Tampermonkey: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebh
 
 Known issues:
 
-- See the issues section
+- See the issues section on GitHub
 - You tell me!
