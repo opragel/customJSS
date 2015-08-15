@@ -347,3 +347,9 @@ input.cancelButton {
 	background: #4C6DA5;
 	border-radius: 0;
 }
+
+input#checkAllButton, input#clearAllButton {
+	float: none !important;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}

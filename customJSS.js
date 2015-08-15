@@ -203,6 +203,18 @@ else {
             });
         }); 
         
+        if( $("#Display_Pane").length && $("input#save-button").length) {
+        	var checkAllButton = "<input type='button' id='checkAllButton' class='cancelButton' value='Check All'>";
+        	var clearAllButton = "<input type='button' id='clearAllButton' class='cancelButton' value='Clear All'>";
+        	$('#displayFieldsPane7').after(clearAllButton, checkAllButton);
+        	$("input#checkAllButton").click(function(){
+        	    $('input#FIELD_DISPLAY').filter(":visible").not(this).prop('checked', true);
+        	});
+        	$("input#clearAllButton").click(function(){
+        	    $('input#FIELD_DISPLAY').filter(":visible").not(this).prop('checked', false);
+        	});
+        }
+        
         $(window).on('resize', function(){
             var win = $(this); //this = window
             if (win.height() >= 400) {
