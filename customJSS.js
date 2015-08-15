@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name       Owen's JSS Customizations - Generic
 // @namespace  https://jss.
-// @version    0.1
+// @version    0.5
 // @description  JSS customizations - Generic
 // @include      *://jss.*
 // @include      https://*.jamfcloud.com*
 // ==/UserScript==
 
 // - Intro/Disclaimer
-// Last tested with JSS version 9.72
+// Last tested with JSS version 9.73
 // Disclaimer: Script is presented as-is, use at your own risk.
 
 var jssURL = window.location.protocol + "//" + window.location.host + "";
@@ -206,7 +206,7 @@ else {
         if( $("#Display_Pane").length && $("input#save-button").length) {
         	var checkAllButton = "<input type='button' id='checkAllButton' class='cancelButton' value='Check All'>";
         	var clearAllButton = "<input type='button' id='clearAllButton' class='cancelButton' value='Clear All'>";
-        	$('#displayFieldsPane7').after(clearAllButton, checkAllButton);
+        	$('#displayFieldsPane7').after(checkAllButton, clearAllButton);
         	$("input#checkAllButton").click(function(){
         	    $('input#FIELD_DISPLAY').filter(":visible").not(this).prop('checked', true);
         	});
