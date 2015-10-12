@@ -304,9 +304,8 @@ th {
   margin-top:15px;
 }
 
-#form-wrapper input.cancelButton, #form-wrapper input.alternativeButton, input.largeButton, a.largeButton, #form-wrapper input.submitButton {
+#form-wrapper input.cancelButton, #form-wrapper input.alternativeButton, input.largeButton, a.largeButton, #form-wrapper input.submitButton, #form-wrapper input.deleteButton {
   padding: 6px 24px;
-  background: #4C6DA5;
   border: none;
   color: white;
   font-family: 'Roboto';
@@ -315,6 +314,14 @@ th {
   box-shadow: none;
   -webkit-box-shadow: none;
   border-radius: 3px;
+}
+
+#form-wrapper input.cancelButton, #form-wrapper input.alternativeButton, input.largeButton, a.largeButton, #form-wrapper input.submitButton {
+  background: #4C6DA5;
+}
+
+#form-wrapper input.deleteButton {
+  background: #ce0100;
 }
 
 input.cancelButton {
