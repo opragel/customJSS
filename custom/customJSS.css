@@ -233,7 +233,7 @@ header {
 }
 
 #logo-dash,#sidebar-nav {
-  position:fixed;
+  position:relative;
 }
 
 #user-modal,#user-modal-mobile,#sites-modal-mobile {
