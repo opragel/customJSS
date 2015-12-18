@@ -7,7 +7,7 @@ Customizes the JAMF JSS web front-end with goal of improving interface appearanc
 
 Meant for use with Tampermonkey and Chrome. 
 
-Last tested with Chrome 44.0.2403.89 and JSS 9.73
+Last tested with Chrome 47.0.2526.106 and JAMF Software Server 9.81
 
 ## Features
 
@@ -23,13 +23,14 @@ Last tested with Chrome 44.0.2403.89 and JSS 9.73
 - Fairly easy to reconfigure code & styling
 
 
-#### Planned
+#### Wishlist
 - Ability to create scripts, computer/mobile smart/static groups, upload packages, network segment, and more directly from policy creation screen
-- Completely redone navigation bar
+- Spruce or spruce-like report (https://github.com/sheagcraig/spruce) within the JSS web interface
+- Completely redone navigation
 
 ## Requirements
 
-- JAMF Software Server 9.x (Last tested on 9.73)
+- JAMF Software Server 9.x (Last tested on 9.81)
 - Tampermonkey extension & Google Chrome
   - Greasemonkey and Firefox work, but I've seen additional bugs. Have not examined closely this far.
 
