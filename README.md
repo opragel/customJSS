@@ -1,3 +1,5 @@
+Does not work properly with 9.93. Use as your own risk x2.
+
 customJSS
 =========
 
