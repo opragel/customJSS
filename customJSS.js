@@ -116,16 +116,17 @@ if( $( "h2:contains('Advanced Computer Search')").length ) {
 }
 
 //         // Computer Groups changes
-//         if( $( "h2:contains('Computer Groups')").length ) {
-//             $('.standardDataTable thead tr').append("<th class='header'>Details</th><th class='header'>Edit</th>");
-//             $('.standardDataTable tbody tr').each(function() {
-//                 var editLink = $(this).find('.view').attr('href');
-//                 var viewLink = editLink.replace(/o=r/, 'o=v');
-//                 $(this).find('.view').attr('href',viewLink);
-//                 $(this).append("<td><a href='" + editLink + "'>View</a>");
-//                 $(this).append("<td printf><a href='" + editLink.replace(/o=r/, 'o=u') + "'>Edit</a>");
-//             });
-//         }
+if( $( ".ng-binding:contains('Smart Computer Groups')").length ) {
+    $(".list-header").css("display", "none");
+    $('.standardDataTable thead tr').append("<th class='header'>Details</th><th class='header'>Edit</th>");
+    $('.standardDataTable tbody tr').each(function() {
+    var editLink = $(this).find("a").attr("href");
+    var viewLink = editLink.replace(/o=r/, "o=v");
+    $(this).find("a").attr("href",viewLink);
+    $(this).append("<td><a href='" + editLink + "'>View</a>");
+    $(this).append("<td><a href='" + editLink.replace(/o=r/, 'o=u') + "'>Edit</a>");
+    });
+}
 
 //     } //Ends Computer pages else
 //         else if ( $( 'li:contains("Smart Mobile Device Groups")').length ) {
